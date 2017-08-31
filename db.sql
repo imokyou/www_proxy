@@ -1,0 +1,14 @@
+CREATE DATABASE `proxy` DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
+
+
+CREATE TABLE IF NOT EXISTS `user` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`email` VARCHAR(128) NOT NULL,
+    `password` VARCHAR(256) NOT NULL,
+	`contact` VARCHAR(128) NOT NULL,
+	`created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
+	`updated_at` DATETIME ON UPDATE CURRENT_TIMESTAMP,
+	PRIMARY KEY (`id`) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+grant all on *.* to root@'%' identified by 'dfad';
