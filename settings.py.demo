@@ -1,0 +1,14 @@
+# coding=utf8
+
+import logging
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s %(name)s:%(levelname)s %(message)s')
+
+REDIS = {
+    'host': 'localhost',
+    'port': 6379,
+    'password': '',
+    'db': 1
+}
+
+SIGNKEY = ''
