@@ -75,7 +75,7 @@ class RedisClient(object):
 
     def get_proxies_cache(self):
         proxies = self._db.get(self._proxy_cache)
-        if not proxies:
+        if proxies:
             return json.loads(proxies)
         return []
 

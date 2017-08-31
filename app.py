@@ -37,7 +37,7 @@ def get_proxy():
 @app.route("/proxy/count/", methods=["GET"])
 def count_proxy():
     proxy_len = _redisdb.proxy_len
-    return proxy_len
+    return str(proxy_len)
 
 
 def main():
